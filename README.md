@@ -1,4 +1,4 @@
-##BITOVI TAKE HOME EXERCISE
+## BITOVI TAKE HOME EXERCISE
 
 <p>
 The point of this presentation is to demonstrate why a bug is occurring the current
@@ -6,7 +6,7 @@ The point of this presentation is to demonstrate why a bug is occurring the curr
 Let's start by describing the problem.
 </p>
 
-###ISSUE
+### ISSUE
 
 __*Behavior*__: When a User attempts to add an additional person to the application, 
 only the most recent person is sent to the Server for persistence.
@@ -25,7 +25,7 @@ manager data for multiple people.
 * Refactor the application so that it simply sends the client-side in memory data to the Server in the background
 before it prompts the user if they'd like to add another person.
 
- ###DEMONSTRATION
+ ### DEMONSTRATION
  
  <p>
  This proposal will show the working first version of the application, a reproduction of the current issue, as well as
@@ -36,28 +36,28 @@ before it prompts the user if they'd like to add another person.
 2. Navigate your command prompt to the local repo.
 3. Run `npm install`
 
-#####V1
+##### V1
 <p>
 To run the demonstration of the first version of the application, run `npm run v1` in the command line.
 </p>
 
 
-#####Error Reproduction
+##### Error Reproduction
 <p>
 To run the demonstration of the current bug in the application, run `npm run v2` in the command line.
 </p>
 
-#####Batched Solution
+##### Batched Solution
 <p>
 To run the batched persistence proposed solution, run `npm run v3` in the command line.
 </p>
 
-#####Serialized Solution
+##### Serialized Solution
 <p>
 To run the serialized persistence proposed solution, run `npm run v4` in the command line.
 </p>
 
-###RECOMMENDATION
+### RECOMMENDATION
 <p>
 Each of the proposed solutions has its strengths, and the right solution should be chosen based on client needs.
 </p>
@@ -71,7 +71,7 @@ requires some front-end work to handle errors for additional users. Each user en
 so there is no risk of valid data being lost because of invalid data. However, the Client may not want some information to be saved
 while other information is not as it is potentially confusing to the User.
 
-#####My Opinion
+##### My Opinion
 <p>
 I personally recommend the serialized solution. While it may require some work for the front-end code to integrate, 
 the advantages of higher data integrity and faster processing make it very hard to choose against.

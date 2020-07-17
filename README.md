@@ -14,7 +14,7 @@ only the most recent person is sent to the Server for persistence.
 __*Root Cause Analysis*__: When the Client completed a new feature that prompts the User to add
 an additional person to the application, it only persisted the most recent person added by the application. 
 No existing behavior was regressed by this change, but the desired outcome of sending 
-mutiple people to the application server was not achieved.
+multiple people to the application server was not achieved.
 <br><br>
 __*Error*__: The source of this error is that the application's assumption that only one person's data should 
 be persisted to the server was never corrected. New User information, rather than being enqueued for server persistence,
